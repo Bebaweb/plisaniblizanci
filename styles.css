@@ -6,7 +6,7 @@ a{color:#A8654A}
 a:hover{color:#7E4630}
 img{display:block}
 .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
-nav{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between;padding:22px 0}
+nav{position:relative;display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between;padding:22px 0}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;margin-left:-2px}
 .brand img{width:48px;height:48px;border-radius:50%;object-fit:cover}
 .brand span{font-family:Sacramento,cursive;font-size:28px;color:var(--brown);line-height:1}
@@ -16,8 +16,9 @@ nav{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:spac
 .ig{text-decoration:none;color:#3F2618;background:var(--pink);padding:10px 18px;border-radius:999px;margin-right:-2px}
 .burger{display:none;flex-direction:column;justify-content:center;gap:5px;width:46px;height:46px;padding:0 11px;background:transparent;border:1.5px solid #D9C3AC;border-radius:14px;cursor:pointer}
 .burger span{display:block;height:2px;background:var(--brown);border-radius:2px}
-.mobile-menu{display:none;width:100%;flex-direction:column;align-items:center;gap:16px;font-size:16px;font-weight:600;background:#FFFDFA;border:1px solid var(--line);border-radius:20px;padding:20px 16px}
-.mobile-menu.open{display:flex}
+.mobile-menu{display:none;position:absolute;top:calc(100% - 6px);left:50%;z-index:20;width:min(260px,100%);flex-direction:column;align-items:center;gap:16px;font-size:16px;font-weight:600;background:#FFFDFA;border:1px solid var(--line);border-radius:20px;padding:20px 16px;box-shadow:0 16px 36px rgba(120,80,55,.18);opacity:0;visibility:hidden;transform:translate(-50%,-8px) scale(.97);transform-origin:top center;transition:opacity .22s ease,transform .22s ease,visibility 0s linear .22s}
+.mobile-menu.open{opacity:1;visibility:visible;transform:translate(-50%,0) scale(1);transition:opacity .22s ease,transform .22s ease}
+@media (prefers-reduced-motion:reduce){.mobile-menu{transition:none}}
 .mobile-menu a{text-decoration:none;color:var(--body)}
 .hero{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(28px,5vw,60px);align-items:center;padding:clamp(28px,5vw,56px) 0}
 .col{display:flex;flex-direction:column;gap:18px}
@@ -64,6 +65,7 @@ footer.pink a{color:var(--pink)}
 @media (max-width:640px){
   .menu{display:none}
   .burger{display:flex}
+  .mobile-menu{display:flex}
   .col,.info>div{align-items:center;text-align:center}
   .btnrow,.rowspread,footer{justify-content:center;text-align:center}
   .cardtext{align-items:center;text-align:center}
