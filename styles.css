@@ -62,6 +62,29 @@ footer a{text-decoration:none;font-weight:600}
 footer.plain{color:#8A6B54}
 footer.pink{color:var(--pink)}
 footer.pink a{color:var(--pink)}
+.materials{display:flex;flex-direction:column;gap:clamp(22px,3vw,34px);padding-bottom:clamp(40px,6vw,72px)}
+.mat-head{display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;max-width:640px;margin:0 auto}
+.mat-head p.body{max-width:56ch}
+.mat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(18px,3vw,28px)}
+.mat-card{display:flex;flex-direction:column;gap:16px;background:#FFFDFA;border:1px solid var(--line);border-radius:24px;padding:20px}
+.mat-card img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:16px}
+.mat-text{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px}
+.mat-text h3{margin:0;font-size:21px;font-weight:700;color:var(--brown)}
+.mat-text p{margin:0;font-size:15.5px;line-height:1.7;color:var(--body);text-wrap:pretty;max-width:60ch}
+.care{display:flex;flex-direction:column;gap:clamp(18px,2.5vw,24px);background:#FFFDFA;border:1px solid var(--line);border-radius:24px;padding:clamp(24px,3vw,32px)}
+.care-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:clamp(14px,2vw,20px)}
+.care-item{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+.care-item span{font-size:13.5px;line-height:1.4;font-weight:600;color:var(--body)}
+.care-ic{width:58px;height:58px;border-radius:50%;background:#F6EADC;display:flex;align-items:center;justify-content:center;color:#8A6B54}
+.care-ic img{width:32px;height:32px;object-fit:contain}
+.handmade{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(18px,3vw,28px);align-items:center;padding-bottom:clamp(40px,6vw,72px)}
+.handmade .col{gap:14px}
+.handmade p.body{max-width:52ch}
+.handmade h2.head{font-size:clamp(26px,4vw,36px)}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,2vw,18px)}
+.pair img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:20px}
+.btn-pink{display:inline-flex;align-items:center;background:var(--pink);color:#3F2618;text-decoration:none;font-weight:700;font-size:15px;padding:14px 28px;border-radius:999px;border:1.5px solid var(--pink)}
+.btn-pink:hover{background:#DF93A3;border-color:#DF93A3;color:#3F2618}
 @media (max-width:640px){
   .menu{display:none}
   .burger{display:flex}
