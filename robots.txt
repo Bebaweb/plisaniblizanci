@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bebaweb.github.io/plisaniblizanci/sitemap.xml
