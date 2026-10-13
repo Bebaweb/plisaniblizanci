@@ -99,7 +99,18 @@ footer.pink a{color:var(--pink)}
 .contact button{align-self:center;font:inherit;font-weight:700;font-size:15px;cursor:pointer;padding:14px 32px}
 .contact-alt{display:flex;flex-direction:column;align-items:center;gap:12px;padding-top:6px}
 .contact-alt span{font-size:14px;color:#8A6B54}
+.kontakt-grid{display:flex;flex-direction:column;gap:clamp(18px,3vw,28px);max-width:960px;margin:0 auto;padding-bottom:clamp(40px,6vw,72px)}
+.contact.kontakt-form form{max-width:none}
+.contact.kontakt-form{margin:0;padding:clamp(24px,4vw,40px) clamp(18px,4vw,36px)}
+.kontakt-info{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:clamp(16px,2.5vw,24px)}
+.info-card{background:#FFFDFA;border:1px solid var(--line);border-radius:22px;padding:22px 24px;display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.info-card .eyebrow{letter-spacing:.2em}
+.info-card p:not(.eyebrow){margin:0 0 10px;font-size:15px;line-height:1.6;color:var(--body)}
+.info-link{font-size:19px;font-weight:700;color:var(--brown);text-decoration:none;overflow-wrap:anywhere}
+.info-link:hover{color:#A8654A}
 @media (max-width:640px){
+  .info-card{align-items:center;text-align:center}
+  .kontakt-form{border-radius:22px}
   .menu{display:none}
   .burger{display:flex}
   .mobile-menu{display:flex}
