@@ -140,12 +140,11 @@ nav::before{content:"";position:absolute;top:0;bottom:0;left:calc(50% - 50vw);ri
 nav.scrolled::before{box-shadow:0 6px 20px rgba(120,80,55,.10)}
 hr.divider{border:0;height:1.5px;margin:0 0 clamp(40px,6vw,72px);background:linear-gradient(90deg,transparent,#E2CDB6 15%,#E2CDB6 85%,transparent)}
 /* Hero: full-width blush band that also carries the nav, so the first screen reads as one distinct block */
-body.home{overflow-x:hidden}
 body.home header.hero{position:relative}
 body.home nav::before,body.home header.hero::before{content:"";position:absolute;top:0;bottom:0;left:calc(50% - 50vw);right:calc(50% - 50vw);background:#F3DED7;z-index:-1}
 body.home header.hero{min-height:min(80vh,720px);padding:clamp(24px,4vw,48px) 0 clamp(56px,8vw,104px);gap:clamp(32px,6vw,88px)}
 body.home header.hero .col{gap:22px}
-body.home header.hero .photo{aspect-ratio:4/5;max-height:640px;border-radius:999px 999px 28px 28px;box-shadow:0 30px 60px rgba(120,80,55,.18)}
+body.home header.hero .photo{aspect-ratio:4/5;max-height:640px}
 body.home header.hero .btnrow{align-items:center;gap:20px}
 body.home header.hero .btn-solid{padding:16px 32px}
 .text-link{font-weight:700;font-size:15px;color:var(--brown);text-decoration:none;border-bottom:1.5px solid var(--pink);padding-bottom:2px}
